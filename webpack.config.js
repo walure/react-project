@@ -10,7 +10,7 @@ module.exports = {
   devServer:{
     contentBase:'./',//设置目录,
     host:'localhost',//访问地址
-    compress:true,
+    compress:true,//是否压缩
     port:3000
   },
   module:{
@@ -22,6 +22,10 @@ module.exports = {
             query:{
                 presets:['es2015','react']
             }
+        },
+        {
+          test:/\.css$/,
+          loader:['style-loader','css-loader']
         }
     ]
   }
